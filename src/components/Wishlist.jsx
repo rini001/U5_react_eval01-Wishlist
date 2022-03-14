@@ -23,6 +23,7 @@ export const Wishlist = () => {
     }
   };
   return (
+    
     <div className={styles.div1}>
       <h1>Wishlist</h1>
       <div>
@@ -35,13 +36,14 @@ export const Wishlist = () => {
       <button onClick={handleAdd}>ADD</button>
       <div>
         {wishes.map(({ value }, i) => {
-          if (i < 3) {
+          if (i<=3) {
             return <div key={uuid()}>{value}</div>;
           } else {
-              return   <div key={uuid()}>Exceeded Limit</div>;
+              return  null;
           }
         })}
       </div>
     </div>
   );
+   
 };
