@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
-import { Vegetables } from "./Vegetables";
 import styles from "./Wishlist.module.css"
 export const Wishlist = () => {
   const [query, setQuery] = useState("");
