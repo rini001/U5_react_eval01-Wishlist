@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
+import { Vegetables } from "./Vegetables";
 import styles from "./Wishlist.module.css"
 export const Wishlist = () => {
   const [query, setQuery] = useState("");
@@ -22,6 +23,7 @@ export const Wishlist = () => {
       alert("You haven't entered any wish");
     }
   };
+  if(wishes.length<=3){
   return (
     
     <div className={styles.div1}>
@@ -36,14 +38,15 @@ export const Wishlist = () => {
       <button onClick={handleAdd}>ADD</button>
       <div>
         {wishes.map(({ value }, i) => {
-          if (i<=3) {
+         
             return <div key={uuid()}>{value}</div>;
-          } else {
-              return  null;
-          }
+        
         })}
       </div>
     </div>
   );
-   
+    }
+    else{
+        return <h1>You cannot add more than 3 wishes</h1>
+    }
 };
