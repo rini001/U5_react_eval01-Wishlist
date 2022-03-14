@@ -1,0 +1,14 @@
+img{
+    width: 10rem;
+    height: 10rem;
+}
+.div1{
+display: flex;
+column-gap: 10%;
+/* border: 2px solid black; */
+justify-content: center;
+align-items: center;
+}
+button{
+    width: 5rem;
+}
